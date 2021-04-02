@@ -6,19 +6,19 @@
 		<div class="col-md-8 offset-md-1">
 			<h2>Book detail</h2>
 			  <table class="table table-striped">
-		      <thead>
-		      	<tr align="center">
-		          <th></th>
-		          <th></th>
-		          <th></th>
-		          <th></th>
-		          <th colspan="3"></th>
-		        </tr>
+		        <thead>
+		      	  <tr align="center">
+		            <th></th>
+		            <th></th>
+		            <th></th>
+		            <th></th>
+		            <th colspan="3"></th>
+		          </tr>
 		    	</thead>
 		    	<tbody>
 		    		<tr>
 				      <td><%= attachment_image_tag @bookdetail.user, :profile_image, :fill, 90, 100, format:'jpeg', fallback: "no_image.jpg" %>
-				      		<%= link_to @bookdetail.user.name, user_path(@bookdetail.user.id) %>
+				      <%= link_to @bookdetail.user.name, user_path(@bookdetail.user.id) %>
 				      </td>
 				      <td><%= link_to @bookdetail.title, book_path(@bookdetail.id) %>
 				      </td>
@@ -29,7 +29,7 @@
               	<% end %>
 				    </tr>
 		    	</tbody>
-		    </table>
-		  </div>
+		     </table>
+		</div>
     </div>
 </div>

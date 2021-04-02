@@ -9,7 +9,6 @@ class BooksController < ApplicationController
             flash[:notice] = "successfully."
             redirect_to book_path(@book)
         else
-            flash[:notice] = "error"
             @books = Book.all
             @user = current_user
             render :index
@@ -17,14 +16,14 @@ class BooksController < ApplicationController
   end
 
   def index
-      @books = Book.all
-      @user = current_user
-      @book = Book.new
+    @books = Book.all
+    @user = current_user
+    @book = Book.new
   end
 
   def show
-      @book = Book.new
-		  @bookdetail = Book.find(params[:id])
+    @book = Book.new
+		@bookdetail = Book.find(params[:id])
   end
 
   def destroy
@@ -59,9 +58,9 @@ class BooksController < ApplicationController
   end
 
   def  ensure_current_user
-      @book = Book.find(params[:id])
-     if @book.user_id != current_user.id
-        redirect_to books_path
-     end
+    @book = Book.find(params[:id])
+    if @book.user_id != current_user.id
+      redirect_to books_path
+    end
   end
 end
