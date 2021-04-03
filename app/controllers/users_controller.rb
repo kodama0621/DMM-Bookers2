@@ -27,15 +27,14 @@ class UsersController < ApplicationController
 
     redirect_to user_path(@user.id)
     else
-    flash[:notice] = "error."
-            render :edit
+      render :edit
     end
   end
 
   private
 
   def book_params
-    params.require(:book).permit(:title, :body)
+      params.require(:book).permit(:title, :body)
   end
 
   def user_params
