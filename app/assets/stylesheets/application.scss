@@ -14,21 +14,17 @@
  *= require_self
  */
 
-*{
-  box-sizing: border-box;
- }
-
- .Bookers-title {
-  margin: 150px;
-}
-
-.nav-item {
-  position: relative;
-  padding: 0.5rem 0.5rem;
-  padding-right: 30px;
-  text-align: left;
-}
-
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
+div.field, div.actions{
+  margin-bottom: 10px;
+}
+
+#error_explanation{
+  color:red;
+}
+.text-notice{
+  color:green;
+}
